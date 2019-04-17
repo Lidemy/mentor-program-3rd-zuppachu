@@ -84,15 +84,10 @@ echo "檔案建立完成";
 就會建立一個叫做 abc.js 的檔案，這就是一個很簡單的 shell script。
 
 現在請你寫一個 shell script，可以傳入一個數字 n，然後會產生 1~n 個檔案，檔名是 `{number}.js`。
-
 舉例來說：`./num.sh 10`會產生`1.js`、`2.js`...`10.js`。
-
 ## 超級挑戰題
-
 請寫一個`github.sh`，可以傳入一個參數 username，執行之後就會輸出這個 GitHub 使用者的暱稱、介紹、地點跟個人網站。
-
 範例：
-
 ```
 ./github.sh aszx87410
 

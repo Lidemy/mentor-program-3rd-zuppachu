@@ -6,12 +6,6 @@ function join(str, concatStr) {
   }
   return result;
 }
-/*
-一個蠢問題想問：
-題目是 join(str, concatStr)，這樣是把陣列 [1,2,3] 當作引數，賦植直接給與「參數 str」？
-這樣是否不需思考該如何將陣列轉化成 string？
-那不論引數為什麼型態，賦值參數後，都是以參數為主要型態？
-*/
 console.log(join([1, 2, 3], ''));
 console.log(join(['a', 'b', 'c'], '!'));
 console.log(join(['a', 1, 'b', 2, 'c', 3], ','));
@@ -24,6 +18,11 @@ function repeat(str, times) {
   }
   return ans;
 }
-
 console.log(repeat('yoyo', 2));
 console.log(repeat('a', 5));
+/*
+i = 0; 0 < 2; ans = ''+'yoyo'; 0+1 = 1
+i = 1; 1 < 2; ans = 'yoyo'+'yoyo'; 1+1 = 2
+i = 2; 2 不小於 2 ， 跳出
+return ans = 'yoyoyoyoyo'
+*/

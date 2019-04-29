@@ -1,7 +1,8 @@
 // hw1：印出星星
 // 一次印一顆星，三顆星印三次
+
 function printStars(n) {
-  for (let i = 0; i < n; i + 1) {
+  for (let i = 0; i < n; i += 1) {
     console.log('*');
   }
 }

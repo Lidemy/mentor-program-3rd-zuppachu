@@ -1,0 +1,128 @@
+    /* all parts */
+    * {
+        box-sizing: border-box;
+    }
+
+    body, html {
+        margin: 0px;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    /* navbar */
+    nav {
+        background:#e8caca ;
+        color:honeydew;
+        font-weight: 600;
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+    }
+
+    nav  a {
+        color: inherit; /*移除超連結顏色*/
+        text-decoration: none; /*移除超連結底線*/
+    } 
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        list-style: none; /*移除標記符號*/
+        padding: 15px 10px;
+        margin: 0px 10px;
+
+        transition: all 0.5s ease-in;
+    }
+
+    li {
+        width: 80px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    li:nth-child(2):hover, li:nth-child(3):hover {
+        color:rgb(96, 157, 96);
+        cursor: pointer; 
+    }
+
+    /* header */
+    .header {
+        width: 100%;
+        padding-top: 200px;
+        padding-bottom: 90px;
+        background: url("https://images.unsplash.com/photo-1518676527964-e006f33f3667?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&dl=henry-co-559587-unsplash.jpg") no-repeat fixed center;
+    }
+
+    .header__content {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 0px 100px;   
+    }
+
+    .header__content > h1 {
+        color:honeydew;
+        font-size: 40px;
+    }
+
+    .header__content > p {
+        color: honeydew;
+        font-size: 20px;
+    }
+
+    .button {
+        padding: 10px;
+        margin-top: 10px;
+        display: inline-block;
+        background: blueviolet;
+        border-radius: 5px;
+        color: aliceblue;
+    }
+
+    .button:hover {
+        cursor: pointer;
+        background: pink;
+        color: blueviolet;
+
+    }
+
+    .btn1 {
+        margin-top: 50px;
+    }
+    /* main-content */
+
+    .main {
+        width: 85%;
+        display: flex;
+        flex-direction: row ;
+        align-content: center;
+        margin: 20px auto;
+        border-bottom: 1px solid grey;
+    }
+    .item {
+        flex: 1; 
+        padding-right: 15px;
+        margin: 10px;
+    }
+
+    /* footer */
+    footer {
+        text-align: center;
+        margin-top: 8px;
+        margin-left: 40px;
+        width: 85%;
+    }
+
+    /* RWD */
+    @media screen and (max-width:768px) {
+        .main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header__content {
+            margin: 25px;
+        }
+        
+    }

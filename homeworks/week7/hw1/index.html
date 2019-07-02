@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>week7 wh1 - color game</title>
+        <style>
+            h2 {
+                font-size: 42px;
+                text-align: center;
+                margin-top: 20%;
+                -webkit-text-stroke: 1.5px darkgrey;
+                color: whitesmoke;
+            }
+
+            .box {
+                font-size: 40px;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding-top: 200px;
+                flex-direction: column;
+            }
+
+            #againBtn {
+                display: none;
+            }
+
+            #againBtn.active {
+                display: block;
+                border-radius: 2px;
+                font-size: 20px;
+                background-color: darkgray;
+                color:whitesmoke;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h2>顏色變色，請點擊，GO！</h2>
+            <div><button id="againBtn"> 再玩一次！</button></div>
+        </div>
+        <script>
+            let startTime = 0;
+            let endTime = 0;
+            let timer = 0; // 計時器
+            let isDone = false; // 遊戲是否完成為 false
+
+            // 隨機顏色
+            function setColors() {
+                const letters = '0123456789ABCDEF'.split('');
+                let color = '#';
+                for (let i = 0; i < 6; i += 1) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+
+            // 開始遊戲
+            function playGame() {
+                const time = Math.round(Math.random() * 2000) + 1000;
+                timer = setTimeout(() => {
+                    document.querySelector('body').style.background = setColors();
+                    startTime = new Date();
+                    startTime.getTime();
+                }, time);
+            }
+
+            playGame();
+            
+            // 重新開始遊戲
+            function restartGame() {
+                clearTimeout(timer); // 取消背景變色效果
+                startTime = 0;
+                isDone = false;
+                playGame();
+            }
+            // restartGame() 寫了就不斷重新開始遊戲～傻呀！
+
+            // 對「再玩一次」鍵設定點擊事件
+            const btn = document.querySelector('#againBtn');
+            if (btn) {
+                btn.addEventListener('click', function() {
+                location.reload(); // 畫面重整
+                return;
+                });
+            }
+            /*
+            上列分兩段的寫法解決 Uncaught TypeError: Cannot read property 'addEventListener' of null。
+            上網查看產生類型錯誤的原因：因為在 DOM 全部載完前就先執行了，因此 agianBtn 找不到值。
+            1. https://segmentfault.com/q/1010000004978559
+            2. https://stackoverflow.com/questions/26107125/cannot-read-property-addeventlistener-of-null
+            */
+            
+            document.addEventListener('click', function() {
+                if (startTime === 0) {
+                    alert('還沒喔～耐心點～');
+                    restartGame()
+                } else if (!isDone) {
+                    endTime = new Date();
+                    alert('你的成績：' + ((endTime.getTime() - startTime.getTime()) / 1000) + ' 秒');
+                    isDone = true;
+                    document.querySelector('#againBtn').classList.add('active');
+                }
+            })
+        </script>
+    </body>
+</html>
+

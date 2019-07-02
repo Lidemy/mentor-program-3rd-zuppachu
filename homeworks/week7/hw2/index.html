@@ -1,0 +1,102 @@
+d<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>仿估狗表單</title>
+</head>
+<body>
+    <div class="banner"></div>
+
+    <div class="container">
+        <section class="formArea">
+            <div class="formHeader">
+                    <h1 class="formTitle"> 程式導師實驗計畫第三期報名表單 </h1>
+                    <div class="formDetail"> 詳情請參考：<a target="_blank" href="https://medium.com/hulis-blog/mentor-program-s2-f876c4e13d3b">https://medium.com/hulis-blog/mentor-program-s2-f876c4e13d3b</a><br><br> 填完之後請務必按照文章內的說明再寄信給我，才算報名成功喔。
+                        <span><br><br>* 必填</span>
+                    </div>
+        </section>
+
+        <section class="formBody">
+
+            <form>
+            <!--Q1-->
+                <div class="formContent">
+                    <div class="formInput"> 電子郵件地址   
+                        <span>*</span>
+                    </div>
+                    <br>
+                    <input class="required"  name="email" type="text" placeholder=" 你的電子郵件 ">
+                    <br>
+                </div> 
+
+                <!--Q2-->
+                <div class="formContent">
+                    <div class="formInput"> 暱稱  
+                        <span>*</span>
+                        <p class="ex">該怎麼稱呼你</p>
+                    </div>
+                    <input class="required"  name="name" type="text" placeholder=" 您的回答 ">
+                    <br>
+                </div>
+
+                <!--Q3-->
+                <div class="formContent">
+                    <div class="formInput"> 報名類型   
+                        <span>*</span>
+                    </div>
+                    <div class="checkbox required">
+                        <label><input id="type1" name="applyType" type="radio" value=" 基礎班 "/> 從零到一基礎班（兩個月後開始收保證金 5000，淘汰不退還，結業後兩個月內找到工作付一個月半薪水，沒工作不用付）</label>
+                        <br>
+                        <label><input id="type2" name="applyType" type="radio" vlaue=" 加強班 "/> 在職工程師加強班（兩個月後開始收保證金 5000，三個月時收學費 35000 元台幣，被淘汰不退還）</label>
+                    </div>
+                </div>
+
+                <!--Q4-->
+                <div class="formContent">
+                    <div class="formInput"> 現在的職業
+                        <span>*</span>
+                        <p class="ex"> 範例：學生、前端工程師、待業中、業務 </p>
+                    </div>
+                    <input class="required"  name="job" type="text" placeholder=" 您的回答 ">
+                    <br>
+                </div>
+
+                <!--Q5-->
+                <div class="formContent">
+                        <div class="formInput"> 是否有程式相關背景？
+                            <span>*</span>
+                            <p class="ex"> 範例：無、高中時候學過 C++、學過一點網頁前端、目前在資策會上課...</p>
+                        </div>
+                        <input class="required"  name="experience" type="text" placeholder=" 您的回答 ">
+                        <br>
+                </div>
+
+                <!--Q6-->
+                <div class="formContent">
+                    <div class="formInput"> 其他
+                        <p class="ex"> 其他你想講的 </p>
+                    </div>
+                    <input id="other" name="other" type="text" placeholder=" 您的回答 ">
+                </div>
+
+                <!--submit-->
+                <div class="formSubmit">
+                    <!--<input type="button" value="提交" id="submitBtn" onClick="result"/> 不需要寫 onClick，效果同下。--->
+                    <input type="button" value="提交" id="submitBtn"/> 
+                    <br>
+                    <p>請勿利用 Google 表單送出密碼。</p>
+                </div> 
+            </form>
+        </section>
+    </div>
+    <footer>
+            <p>Google 並未認可或建立這項內容。 檢舉濫用情形 - 服務條款</p>
+            <p>Google 表單</p>
+    </footer>
+
+    <script type="text/javascript" src="./myscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+body, html {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background: #faf2ec;
+}
+
+span {
+    color: red;
+    font-size: 18px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.formInput {
+    font-size: 25px;
+}
+
+.banner {
+    height: 270px;
+    background-image: url(https://lh4.googleusercontent.com/sAvtic6WzLRcGC485d2irc6Q36VS9GaiIj2TjL9AkbD1t3RjwacfNkJmmUe9fh9c0WV-ZVKQcw=w1200);
+    background-position: center;
+}
+
+.container {
+    border-top: 10px solid #F4A471;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    width: 640px;
+    background: #ffffff;
+    margin-top: -100px;
+}
+
+.formArea {
+    padding: 10px 0px 10px 40px;
+}
+.formTitle {
+    font-size: 35px;
+    font-weight: normal;
+}
+
+.formDetail {
+    font-size: 14px;
+}
+
+.formBody {
+    padding: 10px 0px 10px 40px;
+    margin-top: 20px;
+}
+.formContent {
+    margin-right: 25px;
+    padding: 15px;
+}
+
+.formContent ~ .formContent{
+    margin-top: 35px;
+}
+
+.formContent input[type="text"] {
+    width: 400px;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid #eee;
+    display: block;
+    background-color: transparent; /* 讓輸入匡背景透明 */
+}
+
+/* 點擊顯示輸入匡底線 */
+input[type="text"]:focus {
+    outline:none; /* 消除 chrome input 籃框線*/
+    border-bottom: 1px solid red; 
+    background: none; /*去除預設藍色背景*/
+}
+
+.checkbox {
+    margin-top: 20px;
+}
+
+.checkbox label {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px;
+}
+
+.formContent input[type="radio"] {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#submitBtn {
+    border-radius: 5px;
+    font-size: 18px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    background: #4085EB;
+    margin-top: 40px;
+}
+
+#submitBtn:hover {
+    background: #377dc7db;
+    cursor: pointer;
+}
+
+.formSubmit > p {
+    color: darkgray;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;   
+}
+
+footer p:nth-child(2) {
+    font-size: 25px;
+    color: #C3BAB4;
+}
+
+.wrong {
+    background-color: #FBE8E6;
+}
+
+.wrong::after {
+    content:"這是必填問題";
+    display: inline-block;
+    color: #d93025;
+	margin: 10px;
+}
+
+
+/* 660px */
+@media screen and (max-width: 660px){
+    .banner {
+      height: 180px;
+      background-position: center;
+    }
+    .container {
+      margin-top: -50px;
+      width: 420px;
+      padding-right: 20px;
+    }
+    .formTitle {
+      font-size: 34px;
+    }
+    .formContent input[type="text"] {
+        width: 100%;
+        height: 35px;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+  }
+  /*  480px */
+  @media screen and (max-width: 480px){
+    .formTitle {
+      font-size: 24px;
+      display: inline;
+    }
+
+    .container {
+        margin-top: -30px;
+        width: 320px;
+        padding-right: 20px;
+      }
+
+    .formContent input[type="text"] {
+        width: 100%;
+        height: 35px;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+    
+  } 

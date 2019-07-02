@@ -1,0 +1,53 @@
+.bigBox {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 500px;
+    height: 450px;
+    margin: 20px;
+}
+
+.display {
+    width: 400px;
+    height: 70px;
+    border: 1px solid black;
+    margin: 25px auto;
+    border-radius: 5px;
+    text-align: right;
+    font-size: 60px;
+}
+
+.buttonArea {
+    margin: 10px auto 10px auto;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    line-height: 2em;
+    font-size: 24px;
+}
+.row button {
+    border: 1px solid black;
+    margin-top: 10px; 
+    width: 80px;
+    height: 45px;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 30px;
+}
+
+.row button:hover {
+    cursor: pointer;
+    background: orange;
+    color: white;
+    border: 1px solid white;    
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row5 > button:nth-child(3){
+    height: 45px;
+    width: 185px; 
+    background: orange;
+}

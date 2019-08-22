@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>再戰 twitch api</title>
+
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+       	body{
+            background-image: url('https://images.unsplash.com/photo-1483982258113-b72862e6cff6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'); 
+            background-attachment: fixed;
+            background-size: cover;
+       	}
+        
+        /* a {text-decoration: none;} */
+       
+        .content {
+            width: 80%;
+            margin: 80px auto;
+            display: flex;
+            justify-content: space-around;
+            flex-flow: wrap;
+            padding: 40px;
+        }
+        .stream {
+            width: 300px;
+            height: 290px;
+            margin: 20px;
+        }
+         .streamPic {
+            width: 100%;
+            vertical-align: bottom; /* 圖片與下面對齊 */
+        }
+         .streamer {
+            display: flex;
+            justify-content: flex-start;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .streamer ~ .streamer {
+            margin-left: 15px;
+        }
+         .streamerPic {
+            border-radius: 50%;
+            width: 65px;
+            height: 65px;
+            margin: 10px;
+        }
+         
+         .streamerDetail {
+            padding: 0;
+            margin: 5px 20px;
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center; 
+            align-items: center; 
+        }
+        
+         .streamerDetail li {
+            width: 150px;
+            color: white;
+            font-size: 22px;
+            margin-bottom: 4px;
+            white-space: nowrap;
+            
+            /* 下面兩個一起用，刪節號會出現 */
+            overflow: hidden;
+            text-overflow: ellipsis;   
+        }
+
+        .navbar {
+        	width: 100%;
+        	height: 70px;
+        	background-color: #6441a4;
+        	position: fixed;
+        		top: 0px;
+        		left: 0px;
+        }
+
+        .navbar > img {
+        	height: 70px;
+        	width: 70px;
+        }
+        
+        .btn {
+        width: 200px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 60px;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        background-color: #f7b62c;
+        color: #fff;
+        font-size: 1.2em;
+        letter-spacing: 5px;
+        border-width: 0;
+        box-shadow: 0px 2px 0px 2px #d1981c;
+        &:hover{
+            background-color: #e7a924;
+        }
+        &:focus{
+            text-decoration: none;
+            outline: none;
+        }
+    </style>
+</head>
+
+ <body>
+    <div class='navbar'>
+        <img src='https://www.twitch.tv/p/assets/uploads/glitch_474x356.png'>
+    </div>
+    <div class="content">  
+        <div class="stream">
+            <img class="streamPic">
+            <div class="streamer">
+                <img class="streamerPic">
+                <ul class="streamerDetail">
+                    <li> 頻道名稱 </li>
+                    <li> 實況主名稱 </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="btn">載入更多</div>
+    <script src="./myscript.js"></script>
+</body>
+</html>

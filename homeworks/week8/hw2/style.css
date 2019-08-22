@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    color: rgb(44, 107, 155);
+}
+
+h3 {
+    color: rgb(47, 97, 135);
+}
+.container{
+    width: 100%;
+    height: auto;
+    max-width: 768px;
+    margin: 0px auto;
+}
+
+section {
+    margin: 10px auto ;
+    width: 500px;
+}
+
+
+
+textarea {
+    border: 2px solid darkgray;
+    border-radius: 4px;
+    height: 250px;
+    margin-top: 20px;
+    width: 500px; 
+}
+
+textarea::placeholder {
+    color: rgb(90, 163, 218);
+    font-size: 1.5em;
+    letter-spacing: 0.1cm
+}
+
+
+.commentArea{
+    padding: 30px 0;
+    text-align: center;
+}
+
+
+#btn {
+    border: 1px solid rgb(59, 142, 205);;
+    border-radius: 4px;
+    background: rgb(90, 163, 218);
+    color: whitesmoke;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    width: 120px;
+    height: 50px;
+    margin: 20px auto;
+    display: block;
+}
+
+
+.post{
+    display: block;
+    margin: 10px auto;
+    width: 500px;
+    padding: 10px;
+    background-color: #efefef;
+    border-radius: 5px;
+    margin-bottom: 15px;
+} 
+
+footer {
+    text-align: center;
+    width: 500px;
+    margin: 10px auto;
+    padding: 20px;
+    color:  darkgray;
+}
+
+
+
